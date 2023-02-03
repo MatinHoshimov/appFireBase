@@ -30,14 +30,30 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
     
+    @IBOutlet weak var nextBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameField.delegate = self
         emailField.delegate = self
         passwordField.delegate = self
+        
+//       nextBtn.addTarget(self, action: #selector(NextButtonClick), for: .touchUpInside)
 
     }
     
+    @IBAction func NextButtonСlick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ToDoListViewController") as! ToDoListViewController
+        print("hello")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+//        @objc func NextButtonClick(){
+//            print("!!!")
+//
+//        }
 
     @IBAction func switchLogin(_ sender: UIButton) {
         signup = !signup

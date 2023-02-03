@@ -14,40 +14,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            FirebaseApp.configure()
-            Auth.auth().addStateDidChangeListener { (auth, user) in //авторизован ли пользователь или нет
-                if user == nil{
-                    print("hello")
-                    self.showModalAuth()
-                }
-                
-            }
-            return true
-        }
+//        
+//        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//            
+//            FirebaseApp.configure()
+//            Auth.auth().addStateDidChangeListener { (auth, user) in //авторизован ли пользователь или нет
+//                if user == nil{
+//                    print("hello")
+//                    self.showModalAuth()
+//                }
+//                
+//            }
+//            return true
+//        }
         
         func showModalAuth(){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newvc = storyboard.instantiateViewController(withIdentifier:  "authViewController") as! AuthViewController
 
-            self.window?.rootViewController?.present(newvc, animated: true, completion: nil)
+            self.window?.rootViewController = UINavigationController(rootViewController: newvc)
             
             print("hello world")
         }
 
     
-//
-//        let controller = UIViewController()
-//        //controller.view.backgroundColor = .red
-//      //  self.window?.rootViewController?.present(controller, animated: true)
-//        guard let sceneWindow = (scene as? UIWindowScene) else { return }
-//        let windowScene = UIWindow(windowScene: sceneWindow)
-//        windowScene.rootViewController = UINavigationController(rootViewController: controller)
-//        //windowScene.rootViewController
-//        self.window = windowScene
-//        windowScene.makeKeyAndVisible()
-//        showModalAuth()
+
+        let controller = UIViewController()
+        //controller.view.backgroundColor = .red
+      //  self.window?.rootViewController?.present(controller, animated: true)
+        guard let sceneWindow = (scene as? UIWindowScene) else { return }
+        let windowScene = UIWindow(windowScene: sceneWindow)
+        windowScene.rootViewController = UINavigationController(rootViewController: controller)
+        //windowScene.rootViewController
+        self.window = windowScene
+        windowScene.makeKeyAndVisible()
+        showModalAuth()
     }
     func showModalAuth(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

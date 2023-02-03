@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A47A4D70AE9E37B72340A773 /* Pods_appFireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BA89C39061006B2A8D0F55 /* Pods_appFireBase.framework */; };
+		E9294548298CD6E200A08C72 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9294547298CD6E200A08C72 /* ToDoListViewController.swift */; };
 		E9409235298A7060004730AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9409234298A7060004730AA /* AppDelegate.swift */; };
 		E9409237298A7060004730AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9409236298A7060004730AA /* SceneDelegate.swift */; };
 		E9409239298A7060004730AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9409238298A7060004730AA /* ViewController.swift */; };
@@ -17,11 +18,14 @@
 		E9409244298A7060004730AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9409242298A7060004730AA /* LaunchScreen.storyboard */; };
 		E940924C298A762F004730AA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940924B298A762F004730AA /* AuthViewController.swift */; };
 		E940924E298A7D25004730AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E940924D298A7D25004730AA /* GoogleService-Info.plist */; };
+		E99CBD5D298CCC7A001D4D4D /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99CBD5C298CCC7A001D4D4D /* ToDoListItem+CoreDataClass.swift */; };
+		E99CBD5E298CCC7A001D4D4D /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99CBD5B298CCC7A001D4D4D /* ToDoListItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		70BA89C39061006B2A8D0F55 /* Pods_appFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C2275DB8CD60FD132AB073 /* Pods-appFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFireBase.release.xcconfig"; path = "Target Support Files/Pods-appFireBase/Pods-appFireBase.release.xcconfig"; sourceTree = "<group>"; };
+		E9294547298CD6E200A08C72 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		E9409231298A7060004730AA /* appFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9409234298A7060004730AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9409236298A7060004730AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 		E9409245298A7060004730AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E940924B298A762F004730AA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E940924D298A7D25004730AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E99CBD5B298CCC7A001D4D4D /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoListItem+CoreDataProperties.swift"; path = "/Users/matinhoshimov/Desktop/appFireBase/appFireBase/ToDoListItem+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		E99CBD5C298CCC7A001D4D4D /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoListItem+CoreDataClass.swift"; path = "/Users/matinhoshimov/Desktop/appFireBase/appFireBase/ToDoListItem+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		FDDDE0E86C8735B0669491CE /* Pods-appFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFireBase.debug.xcconfig"; path = "Target Support Files/Pods-appFireBase/Pods-appFireBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +60,6 @@
 				FDDDE0E86C8735B0669491CE /* Pods-appFireBase.debug.xcconfig */,
 				93C2275DB8CD60FD132AB073 /* Pods-appFireBase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,6 +74,7 @@
 		E9409228298A705F004730AA = {
 			isa = PBXGroup;
 			children = (
+				E99CBD5F298CCC8A001D4D4D /* ToDoListItem */,
 				E9409233298A7060004730AA /* appFireBase */,
 				E9409232298A7060004730AA /* Products */,
 				1D797B218E8FCC680D8E8FE3 /* Pods */,
@@ -87,6 +93,7 @@
 		E9409233298A7060004730AA /* appFireBase */ = {
 			isa = PBXGroup;
 			children = (
+				E9294547298CD6E200A08C72 /* ToDoListViewController.swift */,
 				E9409234298A7060004730AA /* AppDelegate.swift */,
 				E9409236298A7060004730AA /* SceneDelegate.swift */,
 				E9409238298A7060004730AA /* ViewController.swift */,
@@ -99,6 +106,15 @@
 				E940923D298A7060004730AA /* appFireBase.xcdatamodeld */,
 			);
 			path = appFireBase;
+			sourceTree = "<group>";
+		};
+		E99CBD5F298CCC8A001D4D4D /* ToDoListItem */ = {
+			isa = PBXGroup;
+			children = (
+				E99CBD5C298CCC7A001D4D4D /* ToDoListItem+CoreDataClass.swift */,
+				E99CBD5B298CCC7A001D4D4D /* ToDoListItem+CoreDataProperties.swift */,
+			);
+			path = ToDoListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9294548298CD6E200A08C72 /* ToDoListViewController.swift in Sources */,
 				E9409239298A7060004730AA /* ViewController.swift in Sources */,
 				E9409235298A7060004730AA /* AppDelegate.swift in Sources */,
+				E99CBD5D298CCC7A001D4D4D /* ToDoListItem+CoreDataClass.swift in Sources */,
 				E940924C298A762F004730AA /* AuthViewController.swift in Sources */,
 				E940923F298A7060004730AA /* appFireBase.xcdatamodeld in Sources */,
+				E99CBD5E298CCC7A001D4D4D /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				E9409237298A7060004730AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
